@@ -1,0 +1,69 @@
+[project]
+name = "flask-blog-1"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+
+requires-python = ">=3.11"
+
+dependencies = [
+    "flask==3.1.2",
+    "flask-bcrypt==1.0.1",
+    "flask-login==0.6.3",
+    "flask-sqlalchemy==3.1.1",
+    "flask-wtf==1.2.2",
+    "multipledispatch==1.0.0",
+    "pastescript==3.7.0",
+    "pillow==12.0.0",
+    "pydantic==2.12.5",
+    "python-dotenv==1.2.1",
+    "waitress==3.0.2",
+    "wtforms==3.2.1",
+]
+
+
+
+[tool.ruff.lint]
+ignore = [
+    "F401",
+    "E402",
+    "F541"
+]
+
+[tool.ruff]
+line-length = 120
+indent-width = 4
+exclude = [
+    ".git",
+    "log",
+    ".mypy_cache",
+    ".ruff_cache",
+    ".venv",
+    "venv",
+    ".vscode",
+    "__pypackages__",
+    "__pycache__",
+    "_build",
+    "build",
+    "dist",
+    "node_modules",
+    "site-packages"
+]
+
+
+
+[tool.black]
+line-length = 120
+exclude = '''
+/(
+  # directories
+  \.venv
+  | venv
+  | \.git
+  | \.log
+  | \.mypy_cache
+  | \.tox
+  | build
+  | dist
+)/
+'''

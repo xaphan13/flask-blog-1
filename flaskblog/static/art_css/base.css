@@ -1,0 +1,149 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.6em;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    border-bottom: 1px solid;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    font-size: 1.4em;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s;
+}
+
+h2:hover::after {
+    transform: scaleX(1);
+}
+
+h3 {
+    margin-top: 30px;
+    font-size: 1.2em;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.5s;
+}
+
+h3:hover::after {
+    transform: scaleX(1);
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+ol {
+    margin-left: 20px;
+    font-size: 1.1em;
+}
+
+
+
+/* Правое меню */
+.margin-right-sidebar {
+    margin-right: -20px;
+}
+
+.sidebar {
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+    font-size: 1.3em;
+}
+  
+.sidebar ul {
+    list-style-type: none;
+}
+  
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+  
+
+
+/* Контент и подвал */
+.info_art {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    font-size: 1.0em;
+    text-align: right;
+    transition: background-color 0.3s, color 0.3s;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.art_container {
+    padding: 0px;
+}
+
+.padding-content {
+    padding-top: 70px;
+}
+
+.custom_footer {
+    margin-top: 20px;
+}
+
+
+
+/* Подсветка кода */
+.highlight {
+    font-weight: bold;
+}
+
+.hljs {
+    font-family: 'Courier New', Courier;
+    font-size: 1.2em;
+    padding: 5px 0px 5px 10px !important; /* Устанавливаем желаемый отступ */
+    margin: 0px 0px 0px 0px !important; /* Убираем внешние отступы */
+}
+
+pre {
+    overflow-x: auto;
+    transition: background-color 0.3s;
+}
+
+code {
+    padding: 0px 0px 0px 0px;
+    border-radius: 3px;
+    font-family: 'Courier New', Courier, monospace;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+pre code {
+    display: block;
+    white-space: pre;
+    overflow-x: auto;
+}

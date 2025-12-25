@@ -1,0 +1,23 @@
+{% extends "new_art/art_base.html" %}
+
+{% block content %}
+
+  {% for art in title_list %}
+      <div class="media-body">
+
+        <div class="article-metadata">
+          {{ art.art_id }}. {{ art.author }} - {{ art.lang }}
+          
+          <p><a class="mr-2" href="{{ url_for('art_main.art_author', 
+                                      author=art.author, art_id=art.art_id ) }}">
+            {{ art.title }}
+          </a></p>
+
+        </div>
+
+        <hr class="bg-secondary">
+      
+      </div>
+  {% endfor %}
+
+{% endblock content %}

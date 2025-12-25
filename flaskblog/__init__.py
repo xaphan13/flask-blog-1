@@ -1,0 +1,42 @@
+from flask import Flask
+from flask_bcrypt import Bcrypt
+from flask_login import LoginManager
+from flask_sqlalchemy import SQLAlchemy
+
+from flaskblog.logger.config_log import ConfigLogger
+logFC = ConfigLogger.getLogger("FileStdout", "ClientHTTPS")
+
+from flaskblog.config import Config
+
+
+db = SQLAlchemy()
+bcrypt = Bcrypt()
+
+login_manager = LoginManager()
+login_manager.login_view = 'users.login'
+login_manager.login_message_category = 'info'
+login_manager.login_message = "Нужно авторизоваться или зарегистрироваться"
+
+
+def create_app(config_class=Config, debug_mode=False):
+    app = Flask(__name__)
+    app.config.from_object(config_class)
+    app.config['DEBUG'] = debug_mode
+
+    db.init_app(app)
+    bcrypt.init_app(app)
+    login_manager.init_app(app)
+
+    from flaskblog.new_articles.routesArticles import art_main
+    app.register_blueprint(art_main)
+
+    from flaskblog.users.routesUsers import users
+    from flaskblog.main.routesMain import main
+    from flaskblog.errors.handlers import errors
+    app.register_blueprint(users)
+    app.register_blueprint(main)
+    app.register_blueprint(errors)
+
+    logFC.warning("\n\n\n\n'*****************************************************'start 'main()'")
+    logFC.info(f"'create_app' = {app.config}")
+    return app

@@ -1,0 +1,40 @@
+# VSCode
+.vscode/
+
+# JetBrains IDE
+.idea/
+idea/
+
+# Python
+__pycache__/
+*/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.venv/
+.ruff_cache/
+
+# Logs
+*.log
+log/
+log_app/
+log_celery/
+
+
+# Environment
+*.env
+.env
+
+dock_up/
+fileStore/
+pg_db/
+instance/
+
+
+db.sqlite3
+.DS_Store
+dist
+
+nginx/cert/certificate.pem
+nginx/cert/private_key.pem

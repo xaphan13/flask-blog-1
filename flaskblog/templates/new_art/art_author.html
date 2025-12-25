@@ -1,0 +1,13 @@
+{% extends "new_art/art_base.html" %}
+
+{% block content %}
+
+  <h3><a href="{{ url_for('main.home') }}">{{ art.title }}</a></h3>
+
+  <div class="info_art">
+      {{ art.author }} - {{ art.lang }} - {{ art.art_id }}
+  </div>
+
+  <p>{{ art.content|safe }}</p>
+
+{% endblock content %}
