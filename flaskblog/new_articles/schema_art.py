@@ -25,7 +25,7 @@ class ArticleLang(BaseModel):
 # ------------------------------------------------------------------------
 def get_path_dir():
     cwd_dir = os.getcwd()
-    pack_dir = os.path.join("flaskblog", "templates")  # "flaskblog\\templates"
+    pack_dir = os.path.join("", "templates")  # "flaskblog\\templates"
     content_dir = "content_art"
     return os.path.join(cwd_dir, pack_dir, content_dir)
 
