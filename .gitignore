@@ -23,8 +23,8 @@ log_celery/
 
 
 # Environment
-*.env
-.env
+#*.env
+#.env
 
 dock_up/
 fileStore/
@@ -36,5 +36,5 @@ db.sqlite3
 .DS_Store
 dist
 
-nginx/cert/certificate.pem
-nginx/cert/private_key.pem
+#nginx/cert/certificate.pem
+#nginx/cert/private_key.pem

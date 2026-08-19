@@ -1,0 +1,7 @@
+
+certificate.pem
+private_key.pem
+
+*.pem
+*.crt
+*.key

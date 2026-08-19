@@ -1,3 +1,4 @@
+import gunicorn
 import waitress
 from paste.translogger import TransLogger
 from flaskblog import create_app

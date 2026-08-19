@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(.venv/bin/python *)",
+      "Bash(cd *)",
+      "Bash(tail *)",
+      "Bash(do)",
+      "Bash(set *)",
+      "Bash(done)",
+      "Bash(diff *)",
+      "Bash(sed *)"
+    ]
+  },
+  "$version": 4
+}
